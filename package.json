@@ -1,0 +1,8 @@
+{
+  "name": "MMM-flicio",
+  "version": "1.0.0",
+  "scripts": {
+    "register": "node lib/fliclib-linux-hci/clientlib/nodejs/newscanwizard.js",
+    "test": "node lib/fliclib-linux-hci/clientlib/nodejs/example.js"
+  }
+}
