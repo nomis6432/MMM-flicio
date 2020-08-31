@@ -22,7 +22,7 @@ The `config` attribute has 3 parameters:
 
 An example of a module entry:
 
-```json
+```js
 {
 	module: "MMM-flicio",
 	config: {
@@ -41,16 +41,16 @@ An example of a module entry:
   					notification: "ALSO-DO",
   				}
   			]
-		  },
+			},
       "11:22:33:44:55:66": {
         ButtonUp: [
-				  {
-					  notification: "DO-SOMETHING-COOL",
+					{
+						notification: "DO-SOMETHING-COOL",
             payload: "foo"
-				  }
+					}
         ]
-		  }
-	  }
+			}
+		}
   },
 }
 ```
