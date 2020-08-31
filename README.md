@@ -33,7 +33,7 @@ An example of a module entry:
 					{
 						notification: "DO-SOMETHING",
 						payload: {
-							foo: "bar"
+							foo: "bar",
 							foofoo: "barbar"
 						}
 					},
