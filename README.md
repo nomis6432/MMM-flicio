@@ -28,30 +28,30 @@ An example of a module entry:
 	config: {
 		allowQueued: false,
 		buttons: {
-  		"AA:BB:CC:DD:EE:FF": {
-  			ButtonDown: [
-  				{
-  					notification: "DO-SOMETHING",
-            payload: {
-              foo: "bar"
-              foofoo: "barbar"
-            }
-  				},
-          {
-  					notification: "ALSO-DO",
-  				}
-  			]
+			"AA:BB:CC:DD:EE:FF": {
+				ButtonDown: [
+					{
+						notification: "DO-SOMETHING",
+						payload: {
+							foo: "bar"
+							foofoo: "barbar"
+						}
+					},
+					{
+						notification: "ALSO-DO",
+					}
+				]
 			},
-      "11:22:33:44:55:66": {
-        ButtonUp: [
+			"11:22:33:44:55:66": {
+				ButtonUp: [
 					{
 						notification: "DO-SOMETHING-COOL",
-            payload: "foo"
+						payload: "foo"
 					}
-        ]
+				]
 			}
 		}
-  },
+	},
 }
 ```
 ## notifications
