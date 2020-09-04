@@ -1,6 +1,6 @@
 # MMM-flicio
 
-A [MagicMirror](https://magicmirror.builders/) module to send notifications to other modules using [flic buttons](flic.io) (see [MagicMirror Module documentation](https://docs.magicmirror.builders/development/core-module-file.html) for information about notifications). This module uses [fliclib-linux-hci](https://github.com/50ButtonsEach/fliclib-linux-hci) and therfore only works on Linux on the following architectures: armv6l, i386 and x86_64
+A [MagicMirror](https://magicmirror.builders/) module to send notifications to other modules using [flic buttons](https://www.flic.io) (see [MagicMirror Module documentation](https://docs.magicmirror.builders/development/core-module-file.html) for information about notifications). This module uses [fliclib-linux-hci](https://github.com/50ButtonsEach/fliclib-linux-hci) and therfore only works on Linux on the following architectures: armv6l, i386 and x86_64
 
 ## Installation
 
