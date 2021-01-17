@@ -27,8 +27,8 @@ module.exports = NodeHelper.create({
     let cc = new FlicConnectionChannel(bdAddr);
     this.client.addConnectionChannel(cc);
     let parent = this;
-    cc.on("buttonUpOrDown", function(clickType, wasQueued, timeDiff) {
-      parent.sendSocketNotification("buttonUpOrDown", {
+    cc.on("buttonSingleOrDoubleClickOrHold", function(clickType, wasQueued, timeDiff) {
+      parent.sendSocketNotification("buttonSingleOrDoubleClickOrHold", {
         bdAddr: bdAddr,
         clickType: clickType,
         wasQueued: wasQueued,
@@ -61,6 +61,8 @@ module.exports = NodeHelper.create({
     return new Promise(resolve => {
       flicd.stderr.on("data", data => {
         // wait for flicd to finish launching
+        // log status of flicd, specifically to debug pm2 issues
+        console.log("Flicd launched.", data.toString());
         if (
           data
             .toString()

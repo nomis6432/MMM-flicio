@@ -30,7 +30,7 @@ Module.register("MMM-flicio", {
     if (this.config.buttons[payload.bdAddr]) {
       let button = this.config.buttons[payload.bdAddr];
       let messages;
-      if (notification == "buttonUpOrDown") {
+      if (notification == "buttonSingleOrDoubleClickOrHold") {
         messages = button[payload.clickType];
       } else if (
         notification == "connectionStatusChanged" &&

@@ -17,8 +17,8 @@ Before adding the `config` parameter you should first register your buttons. Thi
 The `config` attribute has 3 parameters:
 
 * `allowQueued`: can be `true` or `false`. When `false` all button inputs that couldn't be delivered within `queueTimeout` seconds will be discarded. `true` by default.
-* `queueTimeout`: number of seconds to wait when `allowQueued` is `false`. Is ignored when `alllowQueued` is `true`. `5` by default.
-* `buttons`: an Object with as key the MAC addresses of the buttons and as value another Object. This Object has as key as String describing the button action, either `'ButtonDown'` or `'ButtonUp'`. The value of this Object is a list of Objects containing `notification` (a String) with the notification and `payload` (Any Type, optionally) the payload that should be sent together with that notification.
+* `queueTimeout`: number of seconds to wait when `allowQueued` is `false`. Is ignored when `allowQueued` is `true`. `5` by default.
+* `buttons`: an Object with as key the MAC addresses of the buttons and as value another Object. This Object has as key as String describing the button action, either `'ButtonSingleClick'`, `'ButtonDoubleClick'`, or `'ButtonHold'`. The value of this Object is a list of Objects containing `notification` (a String) with the notification and `payload` (Any Type, optionally) the payload that should be sent together with that notification.
 
 An example of a module entry:
 
@@ -29,7 +29,7 @@ An example of a module entry:
 		allowQueued: false,
 		buttons: {
 			"AA:BB:CC:DD:EE:FF": {
-				ButtonDown: [
+				ButtonSingleClick: [
 					{
 						notification: "DO-SOMETHING",
 						payload: {
@@ -43,10 +43,23 @@ An example of a module entry:
 				]
 			},
 			"11:22:33:44:55:66": {
-				ButtonUp: [
+				ButtonSingleClick: [
 					{
 						notification: "DO-SOMETHING-COOL",
 						payload: "foo"
+					}
+				],
+				ButtonDoubleClick: [
+					{
+						notification: "DO-SOMETHING-ELSE-COOL",
+						payload: {
+							foo: "bar"
+						}
+					}
+				],
+				ButtonHold: [
+					{
+						notification: "DO-SOMETHING-EXTRA-COOL"
 					}
 				]
 			}
